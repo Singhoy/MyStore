@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'users.apps.UsersConfig',
 ]
 
 # 中间件
@@ -191,3 +192,6 @@ LOGGING = {
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'MyStore.utils.exceptions.exception_handler',
 }
+
+# 认证采用自定义用户模型类
+AUTH_USER_MODEL = 'users.User'
